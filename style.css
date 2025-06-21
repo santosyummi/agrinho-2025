@@ -10,7 +10,7 @@
 
  /* secao cabecalho*/
    .cabecalho{
-        background-color: #abc589;
+        background-color: #a9dbaf;
         color: rgb(0, 0, 0);
         display: flex;
         justify-content: space-around;
@@ -31,7 +31,7 @@
 
    li:hover{
     font-size: 26px;
-     color: rgb(64, 138, 41);
+     color: rgb(51, 99, 36);
      text-decoration: underline;
    }
     
