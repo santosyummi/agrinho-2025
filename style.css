@@ -37,6 +37,7 @@
     
      .introducao-img{
           width: 25%;
+          border: solid 10px black;
      }
 
       /* secao animes*/
