@@ -20,6 +20,7 @@
 
    .cabecalho-imagem{
         width: 25%;
+        border: solid 10px black;
    }
 
    .cabecalho-lista-item{
