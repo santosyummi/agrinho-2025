@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+    body{
+     font-family: 'Poppins', sans-serif;
+    }
+
+ /* secao cabecalho*/
+   .cabecalho{
+        background-color: #c5c1c1;
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 24px 0;
+   } 
+
+   .cabecalho-imagem{
+        width: 10%;
+   }
+
+   .cabecalho-lista-item{
+        display: inline-block;
+        margin: 0 16px;
+        font-size: 16px;
+   }
+    
+     .sobre-os-animes-img{
+          width: 25%;
+     }
+
+      /* secao animes*/
+
+.sobre-os-animes{
+          background-image: linear-gradient(#57405f,#3b00501f);
+          color:#000000;
+          display: flex;
+          justify-content: center;
+          padding: 50px;
+          border-bottom: 2px solid #423049cc;
+      }
+      
+      .sobre-os-animes-conteudo{
+          width: 650px;
+      }
+      .sobre-os-animes-titulo{
+          padding: 45px 0;
+          text-align: center;
+          font-size: 45px;
+      }
+      .sobre-os-animes-texto-um{
+          font-size: 18px;
+      }
+      .sobre-os-animes-texto-dois{
+        font-size: 18px;
+    }
+      .sobre-os-animes-img{
+          width: 25%;
+      }
+      /* secao personagens*/
+.personagens{
+     background-color: #a9a9a9;
+ }
+ 
+ .personagens-titulo{
+ color: #3B0050;
+ text-align: center;
+ padding: 50px;
+ font-size: 45px;
+ }
+ 
+ .todos-personagens{
+     display: grid;
+     grid-template-columns: 33% 33% 33%;
+ }
+ .peronagens-animes{
+     text-align: center;
+    
+ }
+ 
+ .personagens-animes-imagem{ 
+    height: 188px;
+    width:155px;
+ }
+ .personagem-nome{
+     font-weight: 100;
+     text-decoration: underline;
+     color: #bd1d1d;
+ }
+ .personagem-nome:hover{
+     font-weight: 100;
+     text-decoration: underline;
+     color: rgb(0, 0, 0);
+ }
+ .personagens-animes-icone{
+     width: 30px;
+     padding: 5px 0 10px 0;
+ }
+ .personagens-animes-icone:hover{
+     width: 35px;
+     padding: 5px 0;
+ }
+ .rodape{
+    background-color: rgb(108, 107, 116) ;
+    text-align: center;
+    padding: 50px;
+    border-top: #40174e;
+ }
+ .rodape-titulo{
+    font-size: 27px;
+    font-weight: bold;
+    color: #67008a;
+ }
+ .rodape-imagem{
+    width: 300px;
+ }
