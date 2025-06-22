@@ -110,7 +110,7 @@ body {
     font-size: 32px;
 }
 
-.principal section {
+.principal #projetos {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,19 +120,19 @@ body {
     margin: 0 auto;
 }
 
-.principal img {
+.principal #projetos > img {
     width: 80%;
     max-width: 400px;
     border: solid 5px black;
 }
 
-.principal .texto-container {
+.principal #projetos > .texto-container {
     width: 100%;
     max-width: 600px;
     text-align: left;
 }
 
-.principal .texto-container h4 {
+.principal #projetos .texto-container h4 {
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 20px;
@@ -140,25 +140,25 @@ body {
     font-weight: bold;
 }
 
-.principal .texto-container p {
+.principal #projetos .texto-container p {
     font-size: 16px;
     margin-bottom: 15px;
     line-height: 1.6;
     color: #333;
 }
 
-#pratica ol {
+.principal #projetos ol {
     list-style: decimal;
     padding-left: 20px;
     max-width: 600px;
     margin: 0 auto;
 }
 
-#pratica ol li {
+.principal #projetos ol li {
     margin-bottom: 15px;
 }
 
-#pratica ol li p {
+.principal #projetos ol li p {
     margin-top: 5px;
     margin-bottom: 0;
 }
@@ -254,31 +254,31 @@ body {
     .principal-titulo {
         font-size: 38px;
     }
-    .principal section {
+    
+    .principal #projetos {
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
         max-width: 1000px;
     }
-    .principal section:nth-of-type(odd) {
-        flex-direction: row;
-    }
-    .principal section:nth-of-type(even) {
-        flex-direction: row-reverse;
-    }
-    .principal img {
+
+    .principal #projetos > img {
         width: 40%;
         max-width: 350px;
     }
-    .principal .texto-container {
+    .principal #projetos > .texto-container {
         width: 55%;
         text-align: left;
     }
-    #pratica ol {
-        max-width: none;
-        margin: 0;
+    
+    /* Para controlar o segundo grupo de imagem e texto dentro da mesma seção #projetos */
+    .principal #projetos > .principal-titulo:nth-of-type(2) + img {
+        order: 2; /* Move a imagem da segunda parte para a direita */
     }
-
+    .principal #projetos > .principal-titulo:nth-of-type(2) + img + .texto-container {
+        order: 1; /* Move o texto da segunda parte para a esquerda */
+    }
+    
     .rodape-titulo {
         font-size: 24px;
     }
@@ -345,10 +345,10 @@ body {
         padding: 50px;
         font-size: 45px;
     }
-    .principal section {
+    .principal #projetos {
         gap: 40px;
     }
-    .principal img {
+    .principal #projetos > img {
         max-width: 400px;
     }
 
