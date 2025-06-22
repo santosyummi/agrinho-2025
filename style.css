@@ -143,27 +143,35 @@ body {
 }
 
 /* Estilo para todos os parágrafos e h4 dentro do texto-container */
-.principal .texto-container p,
-.principal .texto-container {
+.principal .texto-container h4 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #286d47;
+    font-weight: bold; /* Adicionado para deixar o h4 em negrito */
+}
+
+.principal .texto-container p {
     font-size: 16px;
     margin-bottom: 15px;
     line-height: 1.6;
     color: #333;
 }
 
-.principal .texto-container {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: #286d47;
+#pratica ol {
+    list-style: decimal; /* Garante que a lista ordenada tenha marcadores numéricos */
+    padding-left: 20px; /* Adiciona padding para os números da lista aparecerem */
 }
 
+#pratica ol li {
+    margin-bottom: 15px; /* Espaçamento entre os itens da lista */
+}
 
- p {
-    font-size: 16px;
+#pratica ol li p {
     margin-top: 5px;
     margin-bottom: 0;
 }
+
 
 /* --- Rodapé --- */
 
