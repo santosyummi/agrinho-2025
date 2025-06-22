@@ -1,317 +1,119 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Seu CSS Existente - Adicione o seguinte no final do seu arquivo style.css */
 
-body {
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
-}
-
-/* --- Cabeçalho --- */
-
-.cabecalho {
-    background-color: #a9dbaf;
-    color: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 10px;
-    text-align: center;
-}
-
-.cabecalho-imagem {
-    width: 50%;
-    max-width: 200px;
-    border: solid 5px black;
-    margin-bottom: 15px;
-}
-
-.cabecalho-lista {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-}
-
-.cabecalho-lista-item {
-    display: block;
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-.cabecalho-lista-item a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    padding: 8px 10px;
-    display: block;
-    transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
-}
-
-/* Hover do cabeçalho */
-.cabecalho-lista-item a:hover {
-    font-size: 20px;
-    color: rgb(51, 99, 36);
-    text-decoration: underline;
-}
-
-.cabecalho-lista-item strong:hover {
-    font-size: 20px;
-    color: rgb(51, 99, 36);
-    text-decoration: underline;
-    cursor: pointer; 
-}
-
-
-/* --- Introdução e Final --- */
-
-.introducao,
-.final {
-    background-image: linear-gradient(#286d47, #b3e6b3);
-    color: #000000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 15px;
-    text-align: center;
-    border-bottom: 2px solid #423049cc;
-}
-
-.introducao-conteudo,
-.final-conteudo {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 25px;
-}
-
-.introducao-titulo,
-.final-titulo {
-    padding: 25px 0;
-    font-size: 32px;
-}
-
-.introducao-texto-um,
-.introducao-texto-dois,
-.final-texto {
+/* --- Estilo do Botão de Acessibilidade --- */
+.botao-acessibilidade {
+    background-color: #286d47; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-top: 15px; /* Espaçamento abaixo dos itens do cabeçalho */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.introducao-img,
-.final-img {
-    width: 70%;
-    max-width: 300px;
-    border: solid 5px black;
+.botao-acessibilidade:hover {
+    background-color: #1a4f32;
 }
 
-/* --- Principal --- */
+/* --- Modo Escuro (Dark Mode) --- */
+/* Estas regras serão aplicadas quando a classe 'dark-mode' estiver no body */
 
-.principal {
-    background-color: #d9eee0;
-    padding: 30px 15px;
-    text-align: center;
+body.dark-mode {
+    background-color: #1a1a1a; /* Fundo geral escuro */
+    color: #e0e0e0; /* Texto claro */
 }
 
-.principal-titulo {
-    color: #3B0050;
-    padding: 30px 0;
-    font-size: 32px;
+body.dark-mode .cabecalho {
+    background-color: #333;
+    color: #e0e0e0;
 }
 
-.principal-img{
-    width: 70%;
-    max-width: 300px;
-    border: solid 5px black;
+body.dark-mode .cabecalho-lista-item a {
+    color: #e0e0e0;
 }
 
-.principal-texto{
-    font-size: 16px;
-    margin-bottom: 15px;
+body.dark-mode .cabecalho-lista-item a:hover {
+    color: #a9dbaf; /* Cor de destaque no hover do modo escuro */
 }
 
-/* --- Rodapé --- */
-
-.rodape {
-    background-color: rgb(28, 160, 116);
-    text-align: center;
-    padding: 30px 15px;
-    border-top: 2px solid #40174e;
+body.dark-mode .introducao,
+body.dark-mode .final {
+    background-image: linear-gradient(#303030, #505050); /* Gradiente escuro */
+    color: #e0e0e0;
+    border-bottom-color: #666;
 }
 
-.rodape-titulo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #000000;
-    margin-bottom: 15px;
+body.dark-mode .introducao-titulo,
+body.dark-mode .final-titulo {
+    color: #a9dbaf; /* Cor de destaque para títulos no modo escuro */
 }
 
-.rodape-imagem {
-    width: 120px;
-    border: solid 5px black;
+body.dark-mode .principal {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
 }
 
+body.dark-mode .principal-titulo {
+    color: #a9dbaf;
+}
+
+body.dark-mode .principal h4 {
+    color: #a9dbaf;
+}
+
+body.dark-mode .principal p {
+    color: #e0e0e0;
+}
+
+body.dark-mode #pratica ol li {
+    color: #e0e0e0;
+}
+
+body.dark-mode .rodape {
+    background-color: #333;
+    color: #e0e0e0;
+    border-top-color: #666;
+}
+
+body.dark-mode .rodape-titulo {
+    color: #a9dbaf;
+}
+
+body.dark-mode .rodape-texto {
+    color: #e0e0e0;
+}
+
+body.dark-mode .rodape-texto a {
+    color: #a9dbaf; /* Links no rodapé em modo escuro */
+}
 
 /* Telas maiores que 600px */
-
 @media (min-width: 600px) {
-    .cabecalho-imagem {
-        width: 20%;
-        max-width: 150px;
-    }
-
-    .cabecalho-lista-item {
-        display: inline-block;
-        margin: 0 10px;
-        font-size: 19px;
-    }
-
-    .cabecalho-lista-item a {
-        padding: 10px 12px;
-    }
-
-    .cabecalho-lista-item a:hover {
-        font-size: 20px;
-        color: rgb(51, 99, 36);
-        text-decoration: underline;
-    }
-
-    .cabecalho-lista-item strong:hover { 
-        font-size: 20px;
-        color: rgb(51, 99, 36);
-        text-decoration: underline;
-    }
-
-    .introducao,
-    .final {
-        flex-direction: row;
-        text-align: left;
-        justify-content: space-around;
+    .cabecalho {
+        flex-direction: column; /* Manter o botão abaixo do menu em telas maiores */
         align-items: center;
     }
-
-    .introducao-conteudo,
-    .final-conteudo {
-        width: 55%;
-        margin-right: 30px;
-        margin-bottom: 0;
-    }
-
-    .introducao-titulo,
-    .final-titulo {
-        font-size: 38px;
-        padding: 30px 0;
-    }
-
-    .introducao-texto-um,
-    .introducao-texto-dois,
-    .final-texto {
-        font-size: 17px;
-    }
-
-    .introducao-img,
-    .final-img {
-        width: 35%;
-        max-width: 250px;
-    }
-
-    .principal-titulo {
-        font-size: 38px;
-    }
-
-    .rodape-titulo {
-        font-size: 24px;
-    }
-
-    .rodape-imagem {
-        width: 150px;
+    /* Ajuste para o botão em telas maiores */
+    .botao-acessibilidade {
+        margin-left: 0;
+        margin-top: 20px; /* Ajuste para o espaçamento */
     }
 }
 
 /* Telas maiores que 900px */
-
 @media (min-width: 900px) {
     .cabecalho {
-        flex-direction: row;
-        justify-content: space-around; 
-        align-items: center; 
-        padding: 24px 50px; 
+        flex-direction: row; /* Voltar para row */
+        justify-content: space-around;
+        align-items: center;
+        padding: 24px 50px;
     }
-
-    .cabecalho-imagem {
-        width: 15%;
-        max-width: 150px;
-        border: solid 10px black;
-        margin-bottom: 0;
-    }
-
-    .cabecalho-lista-item {
-        margin: 0 16px;
-        font-size: 20px;
-    }
-
-    .cabecalho-lista-item a:hover {
-        font-size: 26px;
-        color: rgb(51, 99, 36);
-        text-decoration: underline;
-    }
-
-    .cabecalho-lista-item strong:hover {
-        font-size: 26px;
-        color: rgb(51, 99, 36);
-        text-decoration: underline;
-    }
-
-    .introducao,
-    .final {
-        padding: 50px;
-    }
-
-    .introducao-conteudo,
-    .final-conteudo {
-        width: 60%;
-        max-width: 650px;
-        margin-right: 50px;
-    }
-
-    .introducao-titulo,
-    .final-titulo {
-        padding: 45px 0;
-        font-size: 45px;
-    }
-
-    .introducao-texto-um,
-    .introducao-texto-dois,
-    .final-texto {
-        font-size: 18px;
-    }
-
-    .introducao-img,
-    .final-img {
-        width: 30%;
-        max-width: 300px;
-        border: solid 10px black;
-    }
-
-    .principal {
-        padding: 50px;
-    }
-
-    .principal-titulo {
-        padding: 50px;
-        font-size: 45px;
-    }
-
-    .rodape {
-        padding: 50px;
-    }
-
-    .rodape-titulo {
-        font-size: 27px;
-    }
-
-    .rodape-imagem {
-        width: 190px;
+    /* Posicionar o botão à direita na tela grande */
+    .botao-acessibilidade {
+        margin-left: auto; /* Empurra o botão para a direita */
+        margin-top: 0;
+        margin-right: 20px; /* Adiciona um pequeno espaçamento à direita */
     }
 }
