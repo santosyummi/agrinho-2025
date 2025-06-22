@@ -41,7 +41,6 @@ body {
     font-size: 18px;
 }
 
-/* Para o primeiro item do menu, se quiser que comece em negrito (opcional) */
 .cabecalho-lista-item:first-child a {
     font-weight: bold;
 }
@@ -94,7 +93,6 @@ body {
 .final-texto {
     font-size: 16px;
     margin-bottom: 15px;
-    line-height: 1.6; /* Adicionado para melhor legibilidade */
 }
 
 .introducao-img,
@@ -118,68 +116,42 @@ body {
     font-size: 32px;
 }
 
-/* Aplicar flexbox para organizar imagem e texto nas seções internas da principal */
 .principal section {
     display: flex;
-    flex-direction: column; /* Padrão mobile: imagem acima, texto abaixo */
+    flex-direction: column; 
     align-items: center;
-    gap: 20px; /* Espaço entre a imagem e o conteúdo */
+    gap: 20px; 
     padding: 20px 0;
-    max-width: 900px; /* Limita a largura da seção para não ficar muito esticada */
-    margin: 0 auto; /* Centraliza a seção */
+    max-width: 900px; 
+    margin: 0 auto; 
 }
 
-.principal img { /* Para as imagens dentro das seções da principal */
-    width: 80%; /* Um pouco mais largo para ocupar mais espaço em mobile */
-    max-width: 400px; /* Limita a largura máxima da imagem */
+.principal img { 
+    width: 80%; 
+    max-width: 400px;
     border: solid 5px black;
 }
 
-/* Estilo para o container de texto dentro das seções da principal */
 .principal .texto-container {
     width: 100%; /* Ocupa a largura total do container flex em mobile */
     max-width: 600px; /* Limita a largura do texto em telas maiores */
     text-align: left; /* Alinha o texto à esquerda */
 }
 
-/* Estilo para todos os parágrafos e h4 dentro do texto-container */
-.principal .texto-container p,
-.principal .texto-container h4 {
+
+.principal .texto-container,
+.principal .texto-container {
     font-size: 16px;
     margin-bottom: 15px;
     line-height: 1.6;
     color: #333;
-    /* text-align: left; - Já definido no .texto-container */
 }
 
-.principal .texto-container h4 {
+.principal .texto-container {
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 20px;
     color: #286d47;
-}
-
-/* Ajustes para a lista ordenada na seção prática */
-#pratica ol {
-    list-style-position: inside; /* Numeração dentro do conteúdo */
-    padding-left: 20px; /* Adiciona um recuo para os números */
-    /* max-width: 600px; REMOVIDO, pois o .texto-container já gerencia a largura máxima */
-    margin: 0 auto; /* Centraliza a lista dentro do seu contêiner se não for flex item */
-    text-align: left; /* Alinha o texto da lista à esquerda */
-    width: 100%; /* Garante que ocupe a largura disponível no flex item */
-}
-
-#pratica ol li {
-    font-size: 17px;
-    margin-bottom: 15px;
-    color: #333;
-    line-height: 1.6;
-}
-
-#pratica ol li p {
-    font-size: 16px;
-    margin-top: 5px;
-    margin-bottom: 0;
 }
 
 /* --- Rodapé --- */
