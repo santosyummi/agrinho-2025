@@ -40,8 +40,6 @@ li:hover {
     border: solid 10px black;
 }
 
-/* secao animes*/
-
 .introducao {
     background-image: linear-gradient(#286d47, #b3e6b3);
     color: #000000;
@@ -82,6 +80,7 @@ li:hover {
     text-align: center;
     padding: 50px;
     font-size: 45px;
+    display: flex;
 }
 
 .rodape {
