@@ -144,37 +144,23 @@ body {
 
 /* Estilo para todos os parágrafos e h4 dentro do texto-container */
 .principal .texto-container p,
-.principal .texto-container h4 {
+.principal .texto-container {
     font-size: 16px;
     margin-bottom: 15px;
     line-height: 1.6;
     color: #333;
 }
 
-.principal .texto-container h4 {
+.principal .texto-container {
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 20px;
     color: #286d47;
 }
 
-/* Ajustes para a lista ordenada na seção prática */
-#pratica ol {
-    list-style-position: inside; /* Numeração dentro do conteúdo */
-    padding-left: 20px; /* Adiciona um recuo para os números */
-    margin: 0 auto; /* Centraliza a lista dentro do seu contêiner se não for flex item */
-    text-align: left; /* Alinha o texto da lista à esquerda */
-    width: 100%; /* Garante que ocupe a largura disponível no flex item */
 }
 
-#pratica ol li {
-    font-size: 17px;
-    margin-bottom: 15px;
-    color: #333;
-    line-height: 1.6;
-}
-
-#pratica ol li p {
+ p {
     font-size: 16px;
     margin-top: 5px;
     margin-bottom: 0;
