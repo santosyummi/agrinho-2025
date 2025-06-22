@@ -1,32 +1,30 @@
-/* Estilos globais (Mobile First - base para todas as telas) */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Adicionado para facilitar o controle de padding e border */
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden; /* Evita rolagem horizontal indesejada em dispositivos móveis */
+    overflow-x: hidden; 
 }
 
-/* --- Seção Cabeçalho --- */
 .cabecalho {
     background-color: #a9dbaf;
     color: rgb(0, 0, 0);
     display: flex;
-    flex-direction: column; /* Em telas pequenas, itens empilham */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px 10px; /* Reduz padding para telas menores */
+    padding: 15px 10px;
     text-align: center;
 }
 
 .cabecalho-imagem {
-    width: 50%; /* Aumenta a imagem para ser mais visível em telas pequenas */
-    max-width: 200px; /* Garante que a imagem não fique muito grande */
-    border: solid 5px black; /* Borda um pouco menor */
-    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+    width: 50%; 
+    max-width: 200px; 
+    border: solid 5px black; 
+    margin-bottom: 15px;
 }
 
 .cabecalho-lista {
@@ -36,100 +34,94 @@ body {
 }
 
 .cabecalho-lista-item {
-    display: block; /* Itens da lista um abaixo do outro em telas pequenas */
-    margin: 10px 0; /* Espaçamento vertical */
-    font-size: 18px; /* Tamanho da fonte ajustado */
-    white-space: nowrap; /* Evita quebras de linha indesejadas */
-    overflow: hidden; /* Oculta o conteúdo que excede a largura */
-    text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+    display: block;
+    margin: 10px 0; 
+    font-size: 18px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
-.cabecalho-lista-item a { /* Estilo para os links do menu */
+.cabecalho-lista-item a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     padding: 8px 10px;
     display: block;
-    transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease; /* Transição suave */
+    transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease; 
 }
 
-li:hover .cabecalho-lista-item a { /* Aplica o hover ao link dentro do li */
-    font-size: 20px; /* Ajustado para não ser muito grande no mobile */
+li:hover .cabecalho-lista-item a { 
+    font-size: 20px; 
     color: rgb(51, 99, 36);
     text-decoration: underline;
 }
 
-/* --- Seção Introdução --- */
 .introducao {
     background-image: linear-gradient(#286d47, #b3e6b3);
     color: #000000;
     display: flex;
-    flex-direction: column; /* Empilha conteúdo e imagem em telas pequenas */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 15px; /* Reduz padding */
-    text-align: center; /* Centraliza o texto */
+    padding: 30px 15px; 
+    text-align: center; 
     border-bottom: 2px solid #423049cc;
 }
 
 .introducao-conteudo {
-    width: 100%; /* Ocupa a largura total */
-    max-width: 600px; /* Limita a largura para leitura em telas maiores */
-    margin-bottom: 25px; /* Espaçamento entre texto e imagem */
+    width: 100%;
+    max-width: 600px; 
+    margin-bottom: 25px;
 }
 
 .introducao-titulo {
-    padding: 25px 0; /* Ajusta padding */
-    font-size: 32px; /* Tamanho da fonte para mobile */
+    padding: 25px 0;
+    font-size: 32px; 
 }
 
 .introducao-texto-um,
 .introducao-texto-dois {
-    font-size: 16px; /* Tamanho da fonte para mobile */
-    margin-bottom: 15px; /* Espaçamento entre parágrafos */
+    font-size: 16px; 
+    margin-bottom: 15px;
 }
 
 .introducao-img {
-    width: 70%; /* Imagem maior e mais visível */
-    max-width: 300px; /* Limita o tamanho máximo da imagem */
+    width: 70%; 
+    max-width: 300px; 
     border: solid 5px black;
 }
 
-/* --- Seção Principal --- */
 .principal {
     background-color: #d9eee0;
-    padding: 30px 15px; /* Adiciona padding para conteúdo */
-    text-align: center; /* Centraliza o título */
+    padding: 30px 15px; 
+    text-align: center;
 }
 
 .principal-titulo {
     color: #3B0050;
-    padding: 30px 0; /* Ajusta padding */
-    font-size: 32px; /* Tamanho da fonte para mobile */
+    padding: 30px 0; 
+    font-size: 32px;
 }
 
-/* --- Rodapé --- */
 .rodape {
     background-color: rgb(28, 160, 116);
     text-align: center;
-    padding: 30px 15px; /* Ajusta padding */
-    border-top: 2px solid #40174e; /* Adicionei uma borda superior */
+    padding: 30px 15px;
+    border-top: 2px solid #40174e; 
 }
 
 .rodape-titulo {
-    font-size: 22px; /* Ajusta tamanho da fonte */
+    font-size: 22px;
     font-weight: bold;
     color: #000000;
-    margin-bottom: 15px; /* Espaçamento abaixo do título */
+    margin-bottom: 15px;
 }
 
 .rodape-imagem {
-    width: 120px; /* Reduz o tamanho da imagem para mobile */
+    width: 120px;
     border: solid 5px black;
 }
 
-/* --- Media Queries --- */
-
-/* Para tablets (largura mínima de 600px) */
 @media (min-width: 600px) {
     .cabecalho-imagem {
         width: 20%;
@@ -137,7 +129,7 @@ li:hover .cabecalho-lista-item a { /* Aplica o hover ao link dentro do li */
     }
 
     .cabecalho-lista-item {
-        display: inline-block; /* Itens do menu lado a lado */
+        display: inline-block;
         margin: 0 10px;
         font-size: 19px;
     }
@@ -151,15 +143,14 @@ li:hover .cabecalho-lista-item a { /* Aplica o hover ao link dentro do li */
     }
 
     .introducao {
-        flex-direction: row; /* Coloca imagem e texto lado a lado */
-        text-align: left; /* Alinha o texto à esquerda */
-        padding: 40px;
+        flex-direction: row;
+        text-align: left; 
     }
 
     .introducao-conteudo {
-        width: 55%; /* Ocupa mais espaço */
-        margin-right: 30px; /* Espaçamento entre conteúdo e imagem */
-        margin-bottom: 0; /* Remove espaçamento de baixo */
+        width: 55%; 
+        margin-right: 30px; 
+        margin-bottom: 0; 
     }
 
     .introducao-titulo {
@@ -173,7 +164,7 @@ li:hover .cabecalho-lista-item a { /* Aplica o hover ao link dentro do li */
     }
 
     .introducao-img {
-        width: 35%; /* Reduz o tamanho da imagem */
+        width: 35%;
         max-width: 250px;
     }
 
@@ -190,10 +181,9 @@ li:hover .cabecalho-lista-item a { /* Aplica o hover ao link dentro do li */
     }
 }
 
-/* Para desktops (largura mínima de 900px) */
 @media (min-width: 900px) {
     .cabecalho {
-        flex-direction: row; /* Volta a ser linha para desktop */
+        flex-direction: row;
         justify-content: space-around;
         padding: 24px 0;
     }
@@ -218,8 +208,8 @@ li:hover .cabecalho-lista-item a { /* Aplica o hover ao link dentro do li */
     }
 
     .introducao-conteudo {
-        width: 650px; /* Largura fixa para desktop */
-        margin-right: initial; /* Remove margem */
+        width: 650px;
+        margin-right: initial; 
     }
 
     .introducao-titulo {
@@ -239,7 +229,7 @@ li:hover .cabecalho-lista-item a { /* Aplica o hover ao link dentro do li */
     }
 
     .principal {
-        padding: 50px; /* Aumenta o padding */
+        padding: 50px;
     }
 
     .principal-titulo {
