@@ -50,7 +50,7 @@ body {
     transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease; 
 }
 
-li:hover .cabecalho-lista-item a { 
+li:hover .cabecalho-lista-item { 
     font-size: 20px; 
     color: rgb(51, 99, 36);
     text-decoration: underline;
