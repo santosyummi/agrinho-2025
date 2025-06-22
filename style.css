@@ -120,6 +120,13 @@ body {
     font-size: 32px;
 }
 
+.principal-img{
+    width: 70%;
+    max-width: 300px;
+    border: solid 5px black;
+}
+}
+
 /* --- Rodapé --- */
 
 .rodape {
