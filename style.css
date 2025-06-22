@@ -104,14 +104,15 @@ body {
     text-align: center;
 }
 
-.principal-titulo {
+.principal-titulo,
+.principal-titulo-dois {
     color: #3B0050;
     padding: 30px 0;
     font-size: 32px;
-    width: 100%; /* Garante que o título ocupe a largura total */
-    max-width: 900px; /* Alinha com a largura máxima da seção */
-    margin: 0 auto; /* Centraliza o título */
-    text-align: center; /* Centraliza o texto do título */
+    width: 100%; 
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* Estilo para a seção #projetos (que agora contém tudo) */
