@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
+    let initialFontSize = getComputedStyle(body).fontSize; // Armazena o tamanho inicial da fonte
 
     // Função para alternar o contraste
     const toggleContrast = () => {
@@ -18,12 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
         body.style.fontSize = (currentSize - 2) + 'px'; // Diminui em 2px
     };
 
-    // Adiciona botões (você precisa criá-los no HTML com IDs específicos)
+    // Função para resetar o tamanho da fonte
+    const resetFontSize = () => {
+        body.style.fontSize = initialFontSize;
+    };
+
+    // Pega os botões pelo ID
     const contrastButton = document.getElementById('toggle-contrast');
     const increaseFontButton = document.getElementById('increase-font');
     const decreaseFontButton = document.getElementById('decrease-font');
-    const resetFontButton = document.getElementById('reset-font'); // Adicionar um botão de reset de fonte
+    const resetFontButton = document.getElementById('reset-font');
 
+    // Adiciona os event listeners aos botões se eles existirem
     if (contrastButton) {
         contrastButton.addEventListener('click', toggleContrast);
     }
@@ -36,12 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         decreaseFontButton.addEventListener('click', decreaseFontSize);
     }
 
-    // Se você tiver um botão para resetar a fonte ao tamanho inicial
     if (resetFontButton) {
-        // Armazenar o tamanho de fonte inicial ao carregar a página
-        const initialFontSize = getComputedStyle(body).fontSize;
-        resetFontButton.addEventListener('click', () => {
-            body.style.fontSize = initialFontSize;
-        });
+        resetFontButton.addEventListener('click', resetFontSize);
     }
 });
