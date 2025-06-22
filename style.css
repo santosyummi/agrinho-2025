@@ -38,6 +38,7 @@ li:hover {
 .introducao-img {
     width: 25%;
     border: solid 10px black;
+    display: flex;
 }
 
 .introducao {
