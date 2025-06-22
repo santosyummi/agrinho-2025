@@ -108,8 +108,13 @@ body {
     color: #3B0050;
     padding: 30px 0;
     font-size: 32px;
+    width: 100%; /* Garante que o título ocupe a largura total */
+    max-width: 900px; /* Alinha com a largura máxima da seção */
+    margin: 0 auto; /* Centraliza o título */
+    text-align: center; /* Centraliza o texto do título */
 }
 
+/* Estilo para a seção #projetos (que agora contém tudo) */
 .principal #projetos {
     display: flex;
     flex-direction: column;
@@ -120,18 +125,21 @@ body {
     margin: 0 auto;
 }
 
+/* Estilos para as imagens dentro da seção #projetos */
 .principal #projetos > img {
     width: 80%;
     max-width: 400px;
     border: solid 5px black;
 }
 
+/* Estilos para os contêineres de texto dentro da seção #projetos */
 .principal #projetos > .texto-container {
     width: 100%;
     max-width: 600px;
     text-align: left;
 }
 
+/* Estilos para h4 dentro dos contêineres de texto */
 .principal #projetos .texto-container h4 {
     margin-top: 25px;
     margin-bottom: 10px;
@@ -140,27 +148,12 @@ body {
     font-weight: bold;
 }
 
+/* Estilos para parágrafos dentro dos contêineres de texto */
 .principal #projetos .texto-container p {
     font-size: 16px;
     margin-bottom: 15px;
     line-height: 1.6;
     color: #333;
-}
-
-.principal #projetos ol {
-    list-style: decimal;
-    padding-left: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.principal #projetos ol li {
-    margin-bottom: 15px;
-}
-
-.principal #projetos ol li p {
-    margin-top: 5px;
-    margin-bottom: 0;
 }
 
 .rodape {
@@ -254,31 +247,43 @@ body {
     .principal-titulo {
         font-size: 38px;
     }
-    
+
+    /* Adaptação para o novo HTML onde tudo está em uma única seção #projetos */
     .principal #projetos {
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        max-width: 1000px;
+        flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+        justify-content: center; /* Centraliza os itens */
     }
 
-    .principal #projetos > img {
-        width: 40%;
-        max-width: 350px;
+    .principal #projetos > h2:first-of-type,
+    .principal #projetos > h2:nth-of-type(2) {
+        width: 100%; /* Garante que os títulos ocupem a largura total */
+        text-align: center;
     }
+
+    .principal #projetos > img,
     .principal #projetos > .texto-container {
-        width: 55%;
-        text-align: left;
+        width: 45%; /* Distribui a largura para imagem e texto */
+        max-width: 450px; /* Limite máximo */
     }
-    
-    /* Para controlar o segundo grupo de imagem e texto dentro da mesma seção #projetos */
+
+    /* Reverte a ordem para a seção "Colocando em prática" (segunda parte) */
+    .principal #projetos > .principal-titulo:nth-of-type(2) {
+        order: -1; /* Título antes da imagem */
+    }
     .principal #projetos > .principal-titulo:nth-of-type(2) + img {
-        order: 2; /* Move a imagem da segunda parte para a direita */
+        order: 2; /* Imagem à direita (2ª ordem) */
     }
     .principal #projetos > .principal-titulo:nth-of-type(2) + img + .texto-container {
-        order: 1; /* Move o texto da segunda parte para a esquerda */
+        order: 1; /* Texto à esquerda (1ª ordem) */
     }
-    
+    /* Se você quiser que o segundo conjunto de imagem/texto seja invertido em relação ao primeiro */
+    .principal #projetos > .principal-titulo:nth-of-type(2) + img {
+        order: 2;
+    }
+    .principal #projetos > .principal-titulo:nth-of-type(2) + img + .texto-container {
+        order: 1;
+    }
+
     .rodape-titulo {
         font-size: 24px;
     }
