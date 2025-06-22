@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agrinho</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/accessibility-js@latest/dist/accessibility.min.css">
 </head>
 
 <body>
@@ -123,11 +122,14 @@
     </p>
   </footer>
 
-  <script src="https://unpkg.com/accessibility-js@latest/dist/accessibility.min.js"></script>
-  <script>
-    // Inicializa a biblioteca de acessibilidade
-    const accessibility = new Accessibility();
-  </script>
+  <div class="accessibility-controls">
+      <button id="toggle-contrast" title="Ativar/Desativar alto contraste">Alto Contraste</button>
+      <button id="increase-font" title="Aumentar o tamanho da fonte">A+</button>
+      <button id="decrease-font" title="Diminuir o tamanho da fonte">A-</button>
+      <button id="reset-font" title="Redefinir o tamanho da fonte">Resetar Fonte</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
