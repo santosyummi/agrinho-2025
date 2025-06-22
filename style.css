@@ -10,6 +10,7 @@ body {
 }
 
 /* --- Cabeçalho --- */
+
 .cabecalho {
     background-color: #a9dbaf;
     color: rgb(0, 0, 0);
@@ -40,7 +41,6 @@ body {
     font-size: 18px;
 }
 
-/* Estilo para todos os links do cabeçalho */
 .cabecalho-lista-item a {
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -49,24 +49,23 @@ body {
     transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
 }
 
-/* Hover para todos os links do cabeçalho */
+/* Hover do cabeçalho */
 .cabecalho-lista-item a:hover {
     font-size: 20px;
     color: rgb(51, 99, 36);
     text-decoration: underline;
 }
 
-/* Novo: Estilo para o item "Festejando a conexão campo-cidade" no hover, mesmo sem ser um link direto. */
-/* Se a intenção é que ele seja clicável, o ideal é que seja um <a> no HTML. */
 .cabecalho-lista-item strong:hover {
-    font-size: 20px; /* Mantém o mesmo tamanho de fonte do hover dos links */
+    font-size: 20px;
     color: rgb(51, 99, 36);
     text-decoration: underline;
-    cursor: pointer; /* Indica que é interativo, mesmo não sendo um link */
+    cursor: pointer; 
 }
 
 
-/* --- Introdução e Final (seções com imagem e texto) --- */
+/* --- Introdução e Final --- */
+
 .introducao,
 .final {
     background-image: linear-gradient(#286d47, #b3e6b3);
@@ -108,6 +107,7 @@ body {
 }
 
 /* --- Principal --- */
+
 .principal {
     background-color: #d9eee0;
     padding: 30px 15px;
@@ -121,6 +121,7 @@ body {
 }
 
 /* --- Rodapé --- */
+
 .rodape {
     background-color: rgb(28, 160, 116);
     text-align: center;
@@ -140,9 +141,9 @@ body {
     border: solid 5px black;
 }
 
-/* --- Media Queries --- */
 
 /* Telas maiores que 600px */
+
 @media (min-width: 600px) {
     .cabecalho-imagem {
         width: 20%;
@@ -165,7 +166,7 @@ body {
         text-decoration: underline;
     }
 
-    .cabecalho-lista-item strong:hover { /* Hover para o strong em telas maiores */
+    .cabecalho-lista-item strong:hover { 
         font-size: 20px;
         color: rgb(51, 99, 36);
         text-decoration: underline;
@@ -218,12 +219,13 @@ body {
 }
 
 /* Telas maiores que 900px */
+
 @media (min-width: 900px) {
     .cabecalho {
         flex-direction: row;
-        justify-content: space-around; /* Mantém a distribuição */
-        align-items: center; /* Alinha verticalmente */
-        padding: 24px 50px; /* Aumenta o padding lateral para afastar da borda */
+        justify-content: space-around; 
+        align-items: center; 
+        padding: 24px 50px; 
     }
 
     .cabecalho-imagem {
@@ -244,8 +246,8 @@ body {
         text-decoration: underline;
     }
 
-    .cabecalho-lista-item strong:hover { /* Hover para o strong em telas muito grandes */
-        font-size: 26px; /* Aumenta um pouco mais no hover */
+    .cabecalho-lista-item strong:hover {
+        font-size: 26px;
         color: rgb(51, 99, 36);
         text-decoration: underline;
     }
