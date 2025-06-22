@@ -143,34 +143,39 @@ li, a:hover {
         padding: 10px 12px;
     }
 
-    li:hover {
+    li, a:hover {
         font-size: 20px; 
         color: rgb(51, 99, 36);
         text-decoration: underline;
     }
 
-    .introducao {
+    .introducao 
+    .final {
         flex-direction: row;
         text-align: left; 
     }
 
-    .introducao-conteudo {
+    .introducao-conteudo 
+    .final-conteudo {
         width: 55%; 
         margin-right: 30px; 
         margin-bottom: 0; 
     }
 
-    .introducao-titulo {
+    .introducao-titulo 
+    .final-titulo{
         font-size: 38px;
         padding: 30px 0;
     }
 
     .introducao-texto-um,
-    .introducao-texto-dois {
+    .introducao-texto-dois 
+    .final-texto {
         font-size: 17px;
     }
 
-    .introducao-img {
+    .introducao-img
+    .final-img {
         width: 35%;
         max-width: 250px;
     }
@@ -206,32 +211,37 @@ li, a:hover {
         font-size: 20px;
     }
 
-    li:hover {
+    li, a:hover {
         font-size: 26px;
         color: rgb(51, 99, 36);
         text-decoration: underline;
     }
 
-    .introducao {
+    .introducao 
+    .final {
         padding: 50px;
     }
 
-    .introducao-conteudo {
+    .introducao-conteudo 
+    .final-conteudo {
         width: 650px;
         margin-right: initial; 
     }
 
-    .introducao-titulo {
+    .introducao-titulo
+    .final-titulo {
         padding: 45px 0;
         font-size: 45px;
     }
 
     .introducao-texto-um,
-    .introducao-texto-dois {
+    .introducao-texto-dois 
+    .final-texto {
         font-size: 18px;
     }
 
-    .introducao-img {
+    .introducao-img 
+    .final-img {
         width: 25%;
         border: solid 10px black;
         max-width: initial;
