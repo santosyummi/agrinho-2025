@@ -104,7 +104,7 @@ body {
     border: solid 5px black;
 }
 
-/* --- Principal --- */
+/* --- Principal (seções Projetos e Prática) --- */
 
 .principal {
     background-color: #d9eee0;
@@ -118,36 +118,49 @@ body {
     font-size: 32px;
 }
 
-.principal-img{
-    width: 70%;
-    max-width: 300px;
-    border: solid 5px black;
-    margin-bottom: 20px; /* Adicionado um pouco de espaço abaixo da imagem */
+/* Aplicar flexbox para organizar imagem e texto nas seções internas da principal */
+.principal section {
+    display: flex;
+    flex-direction: column; /* Padrão mobile: imagem acima, texto abaixo */
+    align-items: center;
+    gap: 20px; /* Espaço entre a imagem e o conteúdo */
+    padding: 20px 0;
+    max-width: 900px; /* Limita a largura da seção para não ficar muito esticada */
+    margin: 0 auto; /* Centraliza a seção */
 }
 
-/* Estilo para todos os parágrafos dentro da seção principal (ajuste anterior) */
-.principal p {
+.principal img { /* Para as imagens dentro das seções da principal */
+    width: 80%; /* Um pouco mais largo para ocupar mais espaço em mobile */
+    max-width: 400px; /* Limita a largura máxima da imagem */
+    border: solid 5px black;
+}
+
+/* Estilo para todos os parágrafos e h4 dentro da seção principal */
+.principal p, .principal h4 {
     font-size: 16px;
     margin-bottom: 15px;
-    line-height: 1.6; /* Adicionado para melhor legibilidade */
-    color: #333; /* Exemplo: um cinza escuro para o texto */
+    line-height: 1.6;
+    color: #333;
+    text-align: left; /* Alinha o texto à esquerda para melhor leitura */
+    width: 100%; /* Ocupa a largura total do container flex */
+    max-width: 600px; /* Limita a largura do texto para melhor leitura em telas maiores */
 }
 
-/* Estilo para os títulos h4 dentro da seção principal (ajuste anterior) */
 .principal h4 {
-    margin-top: 25px; /* Espaço acima de cada subtítulo */
-    margin-bottom: 10px; /* Espaço abaixo do subtítulo */
-    font-size: 20px; /* Ajuste o tamanho da fonte se desejar */
-    color: #286d47; /* Uma cor para destacar os subtítulos */
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #286d47;
 }
 
-/* Estilo para os itens da lista ordenada na seção prática (ajuste anterior) */
+/* Ajustes para a lista ordenada na seção prática */
 #pratica ol {
     list-style-position: inside; /* Numeração dentro do conteúdo */
-    padding-left: 0; /* Remove padding padrão se não for necessário */
-    max-width: 600px; /* Limita a largura da lista para melhor leitura */
-    margin: 20px auto; /* Centraliza a lista */
+    padding-left: 20px; /* Adiciona um recuo para os números */
+    max-width: 600px; /* Limita a largura da lista */
+    margin: 0 auto; /* Centraliza a lista dentro do seu contêiner */
     text-align: left; /* Alinha o texto da lista à esquerda */
+    width: 100%; /* Garante que ocupe a largura disponível no flex item */
 }
 
 #pratica ol li {
@@ -158,9 +171,9 @@ body {
 }
 
 #pratica ol li p {
-    font-size: 16px; /* Tamanho do parágrafo dentro do item da lista */
-    margin-top: 5px; /* Espaço entre o título do item e o parágrafo */
-    margin-bottom: 0; /* Remove margem extra se o li já tiver */
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 /* --- Rodapé --- */
@@ -287,30 +300,27 @@ body.dark-mode .rodape-texto a {
     color: #a9dbaf; /* Links no rodapé em modo escuro */
 }
 
-
 /* --- Media Queries --- */
 
 /* Telas maiores que 600px */
 @media (min-width: 600px) {
+    /* Regras do Cabeçalho para 600px+ */
     .cabecalho {
-        flex-direction: column; /* Manter o botão abaixo do menu em telas maiores, ou ajuste para row se preferir */
+        flex-direction: column; /* Manter o botão abaixo do menu em telas maiores */
         align-items: center;
     }
     .cabecalho-imagem {
         width: 20%;
         max-width: 150px;
     }
-
     .cabecalho-lista-item {
         display: inline-block;
         margin: 0 10px;
         font-size: 19px;
     }
-
     .cabecalho-lista-item a {
         padding: 10px 12px;
     }
-
     .cabecalho-lista-item a:hover {
         font-size: 20px;
         color: rgb(51, 99, 36);
@@ -319,10 +329,11 @@ body.dark-mode .rodape-texto a {
 
     /* Ajuste para o botão em telas maiores */
     .botao-acessibilidade {
-        margin-left: 0; /* Resetar margem lateral */
+        margin-left: 0;
         margin-top: 20px; /* Ajuste para o espaçamento */
     }
 
+    /* Regras da Introdução e Final para 600px+ */
     .introducao,
     .final {
         flex-direction: row;
@@ -330,51 +341,67 @@ body.dark-mode .rodape-texto a {
         justify-content: space-around;
         align-items: center;
     }
-
     .introducao-conteudo,
     .final-conteudo {
         width: 55%;
         margin-right: 30px;
         margin-bottom: 0;
     }
-
     .introducao-titulo,
     .final-titulo {
         font-size: 38px;
         padding: 30px 0;
     }
-
     .introducao-texto-um,
     .introducao-texto-dois,
     .final-texto,
     .rodape-texto {
         font-size: 17px;
     }
-
     .introducao-img,
     .final-img {
         width: 35%;
         max-width: 250px;
     }
 
+    /* Regras da Seção Principal para 600px+ (Layout Flexbox) */
     .principal-titulo {
         font-size: 38px;
     }
-
-    /* Ajustes para a seção principal em telas maiores */
+    .principal section {
+        flex-direction: row; /* Imagem e texto lado a lado em telas maiores */
+        justify-content: center; /* Centraliza o conteúdo */
+        align-items: flex-start; /* Alinha o topo dos elementos */
+        max-width: 1000px; /* Aumenta a largura máxima para o layout horizontal */
+    }
+    .principal section:nth-of-type(odd) { /* Para alinhar imagem à esquerda e texto à direita */
+        flex-direction: row;
+    }
+    .principal section:nth-of-type(even) { /* Para alinhar imagem à direita e texto à esquerda (oposto) */
+        flex-direction: row-reverse; /* Inverte a ordem para imagem à direita */
+    }
+    .principal img {
+        width: 40%; /* Ajusta a largura da imagem */
+        max-width: 350px; /* Limite máximo da imagem */
+    }
+    .principal .texto-container { /* Container para o texto para gerenciar sua largura e alinhamento */
+        width: 55%; /* Ocupa o restante do espaço */
+        text-align: left;
+    }
     .principal p, .principal h4 {
-        max-width: 800px; /* Limita a largura do texto para melhor leitura */
-        margin-left: auto;
-        margin-right: auto;
+        max-width: none; /* Remove o max-width fixo para preencher o container */
+        margin-left: 0; /* Alinha à esquerda */
+        margin-right: 0;
     }
     #pratica ol {
-        max-width: 800px; /* Ajusta a largura da lista */
+        max-width: none; /* Remove o max-width fixo para preencher o container */
+        margin: 0; /* Remove a margem auto para alinhar à esquerda */
     }
 
+    /* Regras do Rodapé para 600px+ */
     .rodape-titulo {
         font-size: 24px;
     }
-
     .rodape-imagem {
         width: 150px;
     }
@@ -382,25 +409,23 @@ body.dark-mode .rodape-texto a {
 
 /* Telas maiores que 900px */
 @media (min-width: 900px) {
+    /* Regras do Cabeçalho para 900px+ */
     .cabecalho {
         flex-direction: row; /* Voltar para row em telas grandes */
         justify-content: space-around;
         align-items: center;
         padding: 24px 50px;
     }
-
     .cabecalho-imagem {
         width: 15%;
         max-width: 150px;
         border: solid 10px black;
         margin-bottom: 0;
     }
-
     .cabecalho-lista-item {
         margin: 0 16px;
         font-size: 20px;
     }
-
     .cabecalho-lista-item a:hover {
         font-size: 26px;
         color: rgb(51, 99, 36);
@@ -414,31 +439,28 @@ body.dark-mode .rodape-texto a {
         margin-right: 20px; /* Adiciona um pequeno espaçamento à direita */
     }
 
+    /* Regras da Introdução e Final para 900px+ */
     .introducao,
     .final {
         padding: 50px;
     }
-
     .introducao-conteudo,
     .final-conteudo {
         width: 60%;
         max-width: 650px;
         margin-right: 50px;
     }
-
     .introducao-titulo,
     .final-titulo {
         padding: 45px 0;
         font-size: 45px;
     }
-
     .introducao-texto-um,
     .introducao-texto-dois,
     .final-texto,
     .rodape-texto {
         font-size: 18px;
     }
-
     .introducao-img,
     .final-img {
         width: 30%;
@@ -446,23 +468,28 @@ body.dark-mode .rodape-texto a {
         border: solid 10px black;
     }
 
+    /* Regras da Seção Principal para 900px+ */
     .principal {
         padding: 50px;
     }
-
     .principal-titulo {
         padding: 50px;
         font-size: 45px;
     }
+    .principal section {
+        gap: 40px; /* Aumenta o espaço entre a imagem e o texto */
+    }
+    .principal img {
+        max-width: 400px;
+    }
 
+    /* Regras do Rodapé para 900px+ */
     .rodape {
         padding: 50px;
     }
-
     .rodape-titulo {
         font-size: 27px;
     }
-
     .rodape-imagem {
         width: 190px;
     }
