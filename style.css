@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 .cabecalho {
@@ -21,9 +21,9 @@ body {
 }
 
 .cabecalho-imagem {
-    width: 50%; 
-    max-width: 200px; 
-    border: solid 5px black; 
+    width: 50%;
+    max-width: 200px;
+    border: solid 5px black;
     margin-bottom: 15px;
 }
 
@@ -35,28 +35,25 @@ body {
 
 .cabecalho-lista-item {
     display: block;
-    margin: 10px 0; 
-    font-size: 18px; 
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+    margin: 10px 0;
+    font-size: 18px;
 }
 
-.cabecalho-lista-item {
+.cabecalho-lista-item a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     padding: 8px 10px;
     display: block;
-    transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease; 
+    transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
 }
 
-li, a:hover { 
-    font-size: 20px; 
+.cabecalho-lista-item a:hover {
+    font-size: 20px;
     color: rgb(51, 99, 36);
     text-decoration: underline;
 }
 
-.introducao, 
+.introducao,
 .final {
     background-image: linear-gradient(#286d47, #b3e6b3);
     color: #000000;
@@ -64,47 +61,47 @@ li, a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 15px; 
-    text-align: center; 
+    padding: 30px 15px;
+    text-align: center;
     border-bottom: 2px solid #423049cc;
 }
 
-.introducao-conteudo, 
+.introducao-conteudo,
 .final-conteudo {
     width: 100%;
-    max-width: 600px; 
+    max-width: 600px;
     margin-bottom: 25px;
 }
 
-.introducao-titulo, 
+.introducao-titulo,
 .final-titulo {
     padding: 25px 0;
-    font-size: 32px; 
+    font-size: 32px;
 }
 
 .introducao-texto-um,
 .introducao-texto-dois,
 .final-texto {
-    font-size: 16px; 
+    font-size: 16px;
     margin-bottom: 15px;
 }
 
 .introducao-img,
 .final-img {
-    width: 70%; 
-    max-width: 300px; 
+    width: 70%;
+    max-width: 300px;
     border: solid 5px black;
 }
 
 .principal {
     background-color: #d9eee0;
-    padding: 30px 15px; 
+    padding: 30px 15px;
     text-align: center;
 }
 
 .principal-titulo {
     color: #3B0050;
-    padding: 30px 0; 
+    padding: 30px 0;
     font-size: 32px;
 }
 
@@ -112,7 +109,7 @@ li, a:hover {
     background-color: rgb(28, 160, 116);
     text-align: center;
     padding: 30px 15px;
-    border-top: 2px solid #40174e; 
+    border-top: 2px solid #40174e;
 }
 
 .rodape-titulo {
@@ -139,42 +136,44 @@ li, a:hover {
         font-size: 19px;
     }
 
-    .cabecalho-lista-item {
+    .cabecalho-lista-item a {
         padding: 10px 12px;
     }
 
-    li, a:hover {
-        font-size: 20px; 
+    .cabecalho-lista-item a:hover {
+        font-size: 20px;
         color: rgb(51, 99, 36);
         text-decoration: underline;
     }
 
-    .introducao 
+    .introducao,
     .final {
         flex-direction: row;
-        text-align: left; 
+        text-align: left;
+        justify-content: space-around;
+        align-items: center;
     }
 
-    .introducao-conteudo 
+    .introducao-conteudo,
     .final-conteudo {
-        width: 55%; 
-        margin-right: 30px; 
-        margin-bottom: 0; 
+        width: 55%;
+        margin-right: 30px;
+        margin-bottom: 0;
     }
 
-    .introducao-titulo 
-    .final-titulo{
+    .introducao-titulo,
+    .final-titulo {
         font-size: 38px;
         padding: 30px 0;
     }
 
     .introducao-texto-um,
-    .introducao-texto-dois 
+    .introducao-texto-dois,
     .final-texto {
         font-size: 17px;
     }
 
-    .introducao-img
+    .introducao-img,
     .final-img {
         width: 35%;
         max-width: 250px;
@@ -201,7 +200,8 @@ li, a:hover {
     }
 
     .cabecalho-imagem {
-        width: 25%;
+        width: 15%;
+        max-width: 150px;
         border: solid 10px black;
         margin-bottom: 0;
     }
@@ -211,40 +211,41 @@ li, a:hover {
         font-size: 20px;
     }
 
-    li, a:hover {
+    .cabecalho-lista-item a:hover {
         font-size: 26px;
         color: rgb(51, 99, 36);
         text-decoration: underline;
     }
 
-    .introducao 
+    .introducao,
     .final {
         padding: 50px;
     }
 
-    .introducao-conteudo 
+    .introducao-conteudo,
     .final-conteudo {
-        width: 650px;
-        margin-right: initial; 
+        width: 60%;
+        max-width: 650px;
+        margin-right: 50px;
     }
 
-    .introducao-titulo
+    .introducao-titulo,
     .final-titulo {
         padding: 45px 0;
         font-size: 45px;
     }
 
     .introducao-texto-um,
-    .introducao-texto-dois 
+    .introducao-texto-dois,
     .final-texto {
         font-size: 18px;
     }
 
-    .introducao-img 
+    .introducao-img,
     .final-img {
-        width: 25%;
+        width: 30%;
+        max-width: 300px;
         border: solid 10px black;
-        max-width: initial;
     }
 
     .principal {
