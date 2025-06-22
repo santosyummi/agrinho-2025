@@ -1,6 +1,206 @@
-/* Seu CSS Existente - Adicione o seguinte no final do seu arquivo style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* --- Estilo do Botão de Acessibilidade --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- Cabeçalho --- */
+
+.cabecalho {
+    background-color: #a9dbaf;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column; /* Padrão mobile: elementos empilhados */
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.cabecalho-imagem {
+    width: 50%;
+    max-width: 200px;
+    border: solid 5px black;
+    margin-bottom: 15px;
+}
+
+.cabecalho-lista {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.cabecalho-lista-item {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Para o primeiro item do menu, se quiser que comece em negrito (opcional) */
+.cabecalho-lista-item:first-child a {
+    font-weight: bold;
+}
+
+.cabecalho-lista-item a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 8px 10px;
+    display: block;
+    transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Hover do cabeçalho */
+.cabecalho-lista-item a:hover {
+    font-size: 20px;
+    color: rgb(51, 99, 36);
+    text-decoration: underline;
+}
+
+/* --- Introdução e Final --- */
+
+.introducao,
+.final {
+    background-image: linear-gradient(#286d47, #b3e6b3);
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    text-align: center;
+    border-bottom: 2px solid #423049cc;
+}
+
+.introducao-conteudo,
+.final-conteudo {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.introducao-titulo,
+.final-titulo {
+    padding: 25px 0;
+    font-size: 32px;
+}
+
+.introducao-texto-um,
+.introducao-texto-dois,
+.final-texto {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.6; /* Adicionado para melhor legibilidade */
+}
+
+.introducao-img,
+.final-img {
+    width: 70%;
+    max-width: 300px;
+    border: solid 5px black;
+}
+
+/* --- Principal --- */
+
+.principal {
+    background-color: #d9eee0;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.principal-titulo {
+    color: #3B0050;
+    padding: 30px 0;
+    font-size: 32px;
+}
+
+.principal-img{
+    width: 70%;
+    max-width: 300px;
+    border: solid 5px black;
+    margin-bottom: 20px; /* Adicionado um pouco de espaço abaixo da imagem */
+}
+
+/* Estilo para todos os parágrafos dentro da seção principal (ajuste anterior) */
+.principal p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.6; /* Adicionado para melhor legibilidade */
+    color: #333; /* Exemplo: um cinza escuro para o texto */
+}
+
+/* Estilo para os títulos h4 dentro da seção principal (ajuste anterior) */
+.principal h4 {
+    margin-top: 25px; /* Espaço acima de cada subtítulo */
+    margin-bottom: 10px; /* Espaço abaixo do subtítulo */
+    font-size: 20px; /* Ajuste o tamanho da fonte se desejar */
+    color: #286d47; /* Uma cor para destacar os subtítulos */
+}
+
+/* Estilo para os itens da lista ordenada na seção prática (ajuste anterior) */
+#pratica ol {
+    list-style-position: inside; /* Numeração dentro do conteúdo */
+    padding-left: 0; /* Remove padding padrão se não for necessário */
+    max-width: 600px; /* Limita a largura da lista para melhor leitura */
+    margin: 20px auto; /* Centraliza a lista */
+    text-align: left; /* Alinha o texto da lista à esquerda */
+}
+
+#pratica ol li {
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+#pratica ol li p {
+    font-size: 16px; /* Tamanho do parágrafo dentro do item da lista */
+    margin-top: 5px; /* Espaço entre o título do item e o parágrafo */
+    margin-bottom: 0; /* Remove margem extra se o li já tiver */
+}
+
+/* --- Rodapé --- */
+
+.rodape {
+    background-color: rgb(28, 160, 116);
+    text-align: center;
+    padding: 30px 15px;
+    border-top: 2px solid #40174e;
+}
+
+.rodape-titulo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.rodape-imagem {
+    width: 120px;
+    border: solid 5px black;
+    margin-bottom: 20px; /* Adicionado espaço abaixo da imagem no rodapé */
+}
+
+.rodape-texto {
+    font-size: 16px;
+    line-height: 1.6; /* Adicionado para melhor legibilidade */
+    color: #333; /* Definido uma cor para o texto */
+}
+
+.rodape-texto a {
+    color: #0000EE; /* Cor padrão para links, ou defina sua preferida */
+    text-decoration: underline;
+}
+
+.rodape-texto a:hover {
+    color: #0000AA; /* Cor para hover do link */
+}
+
+/* --- Estilo do Botão de Acessibilidade (Novo) --- */
 .botao-acessibilidade {
     background-color: #286d47; /* Cor de fundo do botão */
     color: white; /* Cor do texto */
@@ -17,9 +217,7 @@
     background-color: #1a4f32;
 }
 
-/* --- Modo Escuro (Dark Mode) --- */
-/* Estas regras serão aplicadas quando a classe 'dark-mode' estiver no body */
-
+/* --- Modo Escuro (Dark Mode) - Novas Regras --- */
 body.dark-mode {
     background-color: #1a1a1a; /* Fundo geral escuro */
     color: #e0e0e0; /* Texto claro */
@@ -89,31 +287,183 @@ body.dark-mode .rodape-texto a {
     color: #a9dbaf; /* Links no rodapé em modo escuro */
 }
 
+
+/* --- Media Queries --- */
+
 /* Telas maiores que 600px */
 @media (min-width: 600px) {
     .cabecalho {
-        flex-direction: column; /* Manter o botão abaixo do menu em telas maiores */
+        flex-direction: column; /* Manter o botão abaixo do menu em telas maiores, ou ajuste para row se preferir */
         align-items: center;
     }
+    .cabecalho-imagem {
+        width: 20%;
+        max-width: 150px;
+    }
+
+    .cabecalho-lista-item {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 19px;
+    }
+
+    .cabecalho-lista-item a {
+        padding: 10px 12px;
+    }
+
+    .cabecalho-lista-item a:hover {
+        font-size: 20px;
+        color: rgb(51, 99, 36);
+        text-decoration: underline;
+    }
+
     /* Ajuste para o botão em telas maiores */
     .botao-acessibilidade {
-        margin-left: 0;
+        margin-left: 0; /* Resetar margem lateral */
         margin-top: 20px; /* Ajuste para o espaçamento */
+    }
+
+    .introducao,
+    .final {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .introducao-conteudo,
+    .final-conteudo {
+        width: 55%;
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+
+    .introducao-titulo,
+    .final-titulo {
+        font-size: 38px;
+        padding: 30px 0;
+    }
+
+    .introducao-texto-um,
+    .introducao-texto-dois,
+    .final-texto,
+    .rodape-texto {
+        font-size: 17px;
+    }
+
+    .introducao-img,
+    .final-img {
+        width: 35%;
+        max-width: 250px;
+    }
+
+    .principal-titulo {
+        font-size: 38px;
+    }
+
+    /* Ajustes para a seção principal em telas maiores */
+    .principal p, .principal h4 {
+        max-width: 800px; /* Limita a largura do texto para melhor leitura */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #pratica ol {
+        max-width: 800px; /* Ajusta a largura da lista */
+    }
+
+    .rodape-titulo {
+        font-size: 24px;
+    }
+
+    .rodape-imagem {
+        width: 150px;
     }
 }
 
 /* Telas maiores que 900px */
 @media (min-width: 900px) {
     .cabecalho {
-        flex-direction: row; /* Voltar para row */
+        flex-direction: row; /* Voltar para row em telas grandes */
         justify-content: space-around;
         align-items: center;
         padding: 24px 50px;
     }
+
+    .cabecalho-imagem {
+        width: 15%;
+        max-width: 150px;
+        border: solid 10px black;
+        margin-bottom: 0;
+    }
+
+    .cabecalho-lista-item {
+        margin: 0 16px;
+        font-size: 20px;
+    }
+
+    .cabecalho-lista-item a:hover {
+        font-size: 26px;
+        color: rgb(51, 99, 36);
+        text-decoration: underline;
+    }
+
     /* Posicionar o botão à direita na tela grande */
     .botao-acessibilidade {
         margin-left: auto; /* Empurra o botão para a direita */
-        margin-top: 0;
+        margin-top: 0; /* Remove margem superior extra */
         margin-right: 20px; /* Adiciona um pequeno espaçamento à direita */
+    }
+
+    .introducao,
+    .final {
+        padding: 50px;
+    }
+
+    .introducao-conteudo,
+    .final-conteudo {
+        width: 60%;
+        max-width: 650px;
+        margin-right: 50px;
+    }
+
+    .introducao-titulo,
+    .final-titulo {
+        padding: 45px 0;
+        font-size: 45px;
+    }
+
+    .introducao-texto-um,
+    .introducao-texto-dois,
+    .final-texto,
+    .rodape-texto {
+        font-size: 18px;
+    }
+
+    .introducao-img,
+    .final-img {
+        width: 30%;
+        max-width: 300px;
+        border: solid 10px black;
+    }
+
+    .principal {
+        padding: 50px;
+    }
+
+    .principal-titulo {
+        padding: 50px;
+        font-size: 45px;
+    }
+
+    .rodape {
+        padding: 50px;
+    }
+
+    .rodape-titulo {
+        font-size: 27px;
+    }
+
+    .rodape-imagem {
+        width: 190px;
     }
 }
