@@ -9,13 +9,11 @@ body {
     overflow-x: hidden;
 }
 
-/* --- Cabeçalho --- */
-
 .cabecalho {
     background-color: #a9dbaf;
     color: rgb(0, 0, 0);
     display: flex;
-    flex-direction: column; /* Padrão mobile: elementos empilhados */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 15px 10px;
@@ -41,7 +39,6 @@ body {
     font-size: 18px;
 }
 
-/* Para o primeiro item do menu, se quiser que comece em negrito (opcional) */
 .cabecalho-lista-item:first-child a {
     font-weight: bold;
 }
@@ -54,14 +51,11 @@ body {
     transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
 }
 
-/* Hover do cabeçalho */
 .cabecalho-lista-item a:hover {
     font-size: 20px;
     color: rgb(51, 99, 36);
     text-decoration: underline;
 }
-
-/* --- Introdução e Final --- */
 
 .introducao,
 .final {
@@ -94,7 +88,7 @@ body {
 .final-texto {
     font-size: 16px;
     margin-bottom: 15px;
-    line-height: 1.6; /* Adicionado para melhor legibilidade */
+    line-height: 1.6;
 }
 
 .introducao-img,
@@ -103,8 +97,6 @@ body {
     max-width: 300px;
     border: solid 5px black;
 }
-
-/* --- Principal (seções Projetos e Prática) --- */
 
 .principal {
     background-color: #d9eee0;
@@ -118,37 +110,34 @@ body {
     font-size: 32px;
 }
 
-/* Aplicar flexbox para organizar imagem e texto nas seções internas da principal */
 .principal section {
     display: flex;
-    flex-direction: column; /* Padrão mobile: imagem acima, texto abaixo */
+    flex-direction: column;
     align-items: center;
-    gap: 20px; /* Espaço entre a imagem e o conteúdo */
+    gap: 20px;
     padding: 20px 0;
-    max-width: 900px; /* Limita a largura da seção para não ficar muito esticada */
-    margin: 0 auto; /* Centraliza a seção */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.principal img { /* Para as imagens dentro das seções da principal */
-    width: 80%; /* Um pouco mais largo para ocupar mais espaço em mobile */
-    max-width: 400px; /* Limita a largura máxima da imagem */
+.principal img {
+    width: 80%;
+    max-width: 400px;
     border: solid 5px black;
 }
 
-/* Estilo para o container de texto dentro das seções da principal */
 .principal .texto-container {
-    width: 100%; /* Ocupa a largura total do container flex em mobile */
-    max-width: 600px; /* Limita a largura do texto em telas maiores */
-    text-align: left; /* Alinha o texto à esquerda */
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
 }
 
-/* Estilo para todos os parágrafos e h4 dentro do texto-container */
 .principal .texto-container h4 {
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 20px;
     color: #286d47;
-    font-weight: bold; /* Adicionado para deixar o h4 em negrito */
+    font-weight: bold;
 }
 
 .principal .texto-container p {
@@ -159,21 +148,20 @@ body {
 }
 
 #pratica ol {
-    list-style: decimal; /* Garante que a lista ordenada tenha marcadores numéricos */
-    padding-left: 20px; /* Adiciona padding para os números da lista aparecerem */
+    list-style: decimal;
+    padding-left: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 #pratica ol li {
-    margin-bottom: 15px; /* Espaçamento entre os itens da lista */
+    margin-bottom: 15px;
 }
 
 #pratica ol li p {
     margin-top: 5px;
     margin-bottom: 0;
 }
-
-
-/* --- Rodapé --- */
 
 .rodape {
     background-color: rgb(28, 160, 116);
@@ -192,29 +180,25 @@ body {
 .rodape-imagem {
     width: 120px;
     border: solid 5px black;
-    margin-bottom: 20px; /* Adicionado espaço abaixo da imagem no rodapé */
+    margin-bottom: 20px;
 }
 
 .rodape-texto {
     font-size: 16px;
-    line-height: 1.6; /* Adicionado para melhor legibilidade */
-    color: #333; /* Definido uma cor para o texto */
+    line-height: 1.6;
+    color: #333;
 }
 
 .rodape-texto a {
-    color: #0000EE; /* Cor padrão para links, ou defina sua preferida */
+    color: #0000EE;
     text-decoration: underline;
 }
 
 .rodape-texto a:hover {
-    color: #0000AA; /* Cor para hover do link */
+    color: #0000AA;
 }
 
-/* --- Media Queries --- */
-
-/* Telas maiores que 600px */
 @media (min-width: 600px) {
-    /* Regras do Cabeçalho para 600px+ */
     .cabecalho {
         flex-direction: column;
         align-items: center;
@@ -237,7 +221,6 @@ body {
         text-decoration: underline;
     }
 
-    /* Regras da Introdução e Final para 600px+ */
     .introducao,
     .final {
         flex-direction: row;
@@ -268,29 +251,27 @@ body {
         max-width: 250px;
     }
 
-    /* Regras da Seção Principal para 600px+ (Layout Flexbox) */
     .principal-titulo {
         font-size: 38px;
     }
     .principal section {
-        flex-direction: row; /* Imagem e texto lado a lado em telas maiores */
-        justify-content: center; /* Centraliza o conteúdo */
-        align-items: flex-start; /* Alinha o topo dos elementos */
-        max-width: 1000px; /* Aumenta a largura máxima para o layout horizontal */
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 1000px;
     }
-    /* Alterna a ordem da imagem e texto para cada seção */
     .principal section:nth-of-type(odd) {
-        flex-direction: row; /* Imagem à esquerda, texto à direita */
+        flex-direction: row;
     }
     .principal section:nth-of-type(even) {
-        flex-direction: row-reverse; /* Imagem à direita, texto à esquerda */
+        flex-direction: row-reverse;
     }
     .principal img {
-        width: 40%; /* Ajusta a largura da imagem */
-        max-width: 350px; /* Limite máximo da imagem */
+        width: 40%;
+        max-width: 350px;
     }
     .principal .texto-container {
-        width: 55%; /* Ocupa o restante do espaço */
+        width: 55%;
         text-align: left;
     }
     #pratica ol {
@@ -298,7 +279,6 @@ body {
         margin: 0;
     }
 
-    /* Regras do Rodapé para 600px+ */
     .rodape-titulo {
         font-size: 24px;
     }
@@ -307,11 +287,9 @@ body {
     }
 }
 
-/* Telas maiores que 900px */
 @media (min-width: 900px) {
-    /* Regras do Cabeçalho para 900px+ */
     .cabecalho {
-        flex-direction: row; /* Voltar para row em telas grandes */
+        flex-direction: row;
         justify-content: space-around;
         align-items: center;
         padding: 24px 50px;
@@ -332,7 +310,6 @@ body {
         text-decoration: underline;
     }
 
-    /* Regras da Introdução e Final para 900px+ */
     .introducao,
     .final {
         padding: 50px;
@@ -361,7 +338,6 @@ body {
         border: solid 10px black;
     }
 
-    /* Regras da Seção Principal para 900px+ */
     .principal {
         padding: 50px;
     }
@@ -370,13 +346,12 @@ body {
         font-size: 45px;
     }
     .principal section {
-        gap: 40px; /* Aumenta o espaço entre a imagem e o texto */
+        gap: 40px;
     }
     .principal img {
         max-width: 400px;
     }
 
-    /* Regras do Rodapé para 900px+ */
     .rodape {
         padding: 50px;
     }
