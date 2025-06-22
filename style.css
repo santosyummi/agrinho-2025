@@ -135,18 +135,24 @@ body {
     border: solid 5px black;
 }
 
-/* Estilo para todos os parágrafos e h4 dentro da seção principal */
-.principal p, .principal h4 {
+/* Estilo para o container de texto dentro das seções da principal */
+.principal .texto-container {
+    width: 100%; /* Ocupa a largura total do container flex em mobile */
+    max-width: 600px; /* Limita a largura do texto em telas maiores */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo para todos os parágrafos e h4 dentro do texto-container */
+.principal .texto-container p,
+.principal .texto-container h4 {
     font-size: 16px;
     margin-bottom: 15px;
     line-height: 1.6;
     color: #333;
-    text-align: left; /* Alinha o texto à esquerda para melhor leitura */
-    width: 100%; /* Ocupa a largura total do container flex */
-    max-width: 600px; /* Limita a largura do texto para melhor leitura em telas maiores */
+    /* text-align: left; - Já definido no .texto-container */
 }
 
-.principal h4 {
+.principal .texto-container h4 {
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 20px;
@@ -157,8 +163,8 @@ body {
 #pratica ol {
     list-style-position: inside; /* Numeração dentro do conteúdo */
     padding-left: 20px; /* Adiciona um recuo para os números */
-    max-width: 600px; /* Limita a largura da lista */
-    margin: 0 auto; /* Centraliza a lista dentro do seu contêiner */
+    /* max-width: 600px; REMOVIDO, pois o .texto-container já gerencia a largura máxima */
+    margin: 0 auto; /* Centraliza a lista dentro do seu contêiner se não for flex item */
     text-align: left; /* Alinha o texto da lista à esquerda */
     width: 100%; /* Garante que ocupe a largura disponível no flex item */
 }
@@ -213,7 +219,7 @@ body {
     color: #0000AA; /* Cor para hover do link */
 }
 
-/* --- Estilo do Botão de Acessibilidade (Novo) --- */
+/* --- Estilo do Botão de Acessibilidade --- */
 .botao-acessibilidade {
     background-color: #286d47; /* Cor de fundo do botão */
     color: white; /* Cor do texto */
@@ -230,7 +236,7 @@ body {
     background-color: #1a4f32;
 }
 
-/* --- Modo Escuro (Dark Mode) - Novas Regras --- */
+/* --- Modo Escuro (Dark Mode) --- */
 body.dark-mode {
     background-color: #1a1a1a; /* Fundo geral escuro */
     color: #e0e0e0; /* Texto claro */
@@ -299,6 +305,7 @@ body.dark-mode .rodape-texto {
 body.dark-mode .rodape-texto a {
     color: #a9dbaf; /* Links no rodapé em modo escuro */
 }
+
 
 /* --- Media Queries --- */
 
@@ -374,11 +381,12 @@ body.dark-mode .rodape-texto a {
         align-items: flex-start; /* Alinha o topo dos elementos */
         max-width: 1000px; /* Aumenta a largura máxima para o layout horizontal */
     }
-    .principal section:nth-of-type(odd) { /* Para alinhar imagem à esquerda e texto à direita */
-        flex-direction: row;
+    /* Alterna a ordem da imagem e texto para cada seção */
+    .principal section:nth-of-type(odd) { /* Ex: Seção Projetos (primeira 'section' dentro de 'principal') */
+        flex-direction: row; /* Imagem à esquerda, texto à direita */
     }
-    .principal section:nth-of-type(even) { /* Para alinhar imagem à direita e texto à esquerda (oposto) */
-        flex-direction: row-reverse; /* Inverte a ordem para imagem à direita */
+    .principal section:nth-of-type(even) { /* Ex: Seção Pratica (segunda 'section' dentro de 'principal') */
+        flex-direction: row-reverse; /* Imagem à direita, texto à esquerda */
     }
     .principal img {
         width: 40%; /* Ajusta a largura da imagem */
@@ -388,11 +396,7 @@ body.dark-mode .rodape-texto a {
         width: 55%; /* Ocupa o restante do espaço */
         text-align: left;
     }
-    .principal p, .principal h4 {
-        max-width: none; /* Remove o max-width fixo para preencher o container */
-        margin-left: 0; /* Alinha à esquerda */
-        margin-right: 0;
-    }
+    /* Removido p, h4 aqui para usar a regra do .texto-container */
     #pratica ol {
         max-width: none; /* Remove o max-width fixo para preencher o container */
         margin: 0; /* Remove a margem auto para alinhar à esquerda */
