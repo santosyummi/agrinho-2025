@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
@@ -16,15 +20,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px 10px;
+    padding: 0.9375rem 0.625rem;
     text-align: center;
 }
 
 .cabecalho-imagem {
     width: 50%;
-    max-width: 200px;
-    border: solid 5px black;
-    margin-bottom: 15px;
+    max-width: 12.5rem;
+    border: solid 0.3125rem black;
+    margin-bottom: 0.9375rem;
 }
 
 .cabecalho-lista {
@@ -35,8 +39,8 @@ body {
 
 .cabecalho-lista-item {
     display: block;
-    margin: 10px 0;
-    font-size: 18px;
+    margin: 0.625rem 0;
+    font-size: 1.125rem;
 }
 
 .cabecalho-lista-item:first-child a {
@@ -46,13 +50,13 @@ body {
 .cabecalho-lista-item a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    padding: 8px 10px;
+    padding: 0.5rem 0.625rem;
     display: block;
     transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .cabecalho-lista-item a:hover {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: rgb(51, 99, 36);
     text-decoration: underline;
 }
@@ -65,52 +69,52 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 15px;
+    padding: 1.875rem 0.9375rem;
     text-align: center;
-    border-bottom: 2px solid #423049cc;
+    border-bottom: 0.125rem solid #423049cc;
 }
 
 .introducao-conteudo,
 .final-conteudo {
     width: 100%;
-    max-width: 600px;
-    margin-bottom: 25px;
+    max-width: 37.5rem;
+    margin-bottom: 1.5625rem;
 }
 
 .introducao-titulo,
 .final-titulo {
-    padding: 25px 0;
-    font-size: 32px;
+    padding: 1.5625rem 0;
+    font-size: 2rem;
 }
 
 .introducao-texto-um,
 .introducao-texto-dois,
 .final-texto {
-    font-size: 16px;
-    margin-bottom: 15px;
+    font-size: 1rem;
+    margin-bottom: 0.9375rem;
     line-height: 1.6;
 }
 
 .introducao-img,
 .final-img {
     width: 70%;
-    max-width: 300px;
-    border: solid 5px black;
+    max-width: 18.75rem;
+    border: solid 0.3125rem black;
 }
 
 .principal {
     background-color: #d9eee0;
-    padding: 30px 15px;
+    padding: 1.875rem 0.9375rem;
     text-align: center;
 }
 
 .principal-titulo,
 .principal-titulo-dois {
     color: #3B0050;
-    padding: 30px 0;
-    font-size: 32px;
+    padding: 1.875rem 0;
+    font-size: 2rem;
     width: 100%; 
-    max-width: 900px;
+    max-width: 56.25rem;
     margin: 0 auto;
     text-align: center;
 }
@@ -119,35 +123,35 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 20px 0;
-    max-width: 900px;
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+    max-width: 56.25rem;
     margin: 0 auto;
 }
 
 .principal #projetos > img {
     width: 80%;
-    max-width: 400px;
-    border: solid 5px black;
+    max-width: 25rem;
+    border: solid 0.3125rem black;
 }
 
 .principal #projetos > .texto-container {
     width: 100%;
-    max-width: 600px;
+    max-width: 37.5rem;
     text-align: left;
 }
 
 .principal #projetos .texto-container h4 {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-top: 1.5625rem;
+    margin-bottom: 0.625rem;
+    font-size: 1.25rem;
     color: #286d47;
     font-weight: bold;
 }
 
 .principal #projetos .texto-container p {
-    font-size: 16px;
-    margin-bottom: 15px;
+    font-size: 1rem;
+    margin-bottom: 0.9375rem;
     line-height: 1.6;
     color: #333;
 }
@@ -155,25 +159,25 @@ body {
 .rodape {
     background-color: rgb(28, 160, 116);
     text-align: center;
-    padding: 30px 15px;
-    border-top: 2px solid #40174e;
+    padding: 1.875rem 0.9375rem;
+    border-top: 0.125rem solid #40174e;
 }
 
 .rodape-titulo {
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: bold;
     color: #000000;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
 }
 
 .rodape-imagem {
-    width: 120px;
-    border: solid 5px black;
-    margin-bottom: 20px;
+    width: 7.5rem;
+    border: solid 0.3125rem black;
+    margin-bottom: 1.25rem;
 }
 
 .rodape-texto {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
     color: #333;
 }
@@ -187,38 +191,36 @@ body {
     color: #0000AA;
 }
 
-/* --- Estilos para o botão de acessibilidade e alto contraste --- */
 .accessibility-controls {
-    position: fixed; /* Fixa o grupo de botões na tela */
-    top: 20px;
-    right: 20px;
-    z-index: 1000; /* Garante que fique acima de outros elementos */
+    position: fixed; 
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 1000; 
     display: flex;
-    flex-direction: column; /* Botões empilhados */
-    gap: 8px; /* Espaço entre os botões */
+    flex-direction: column; 
+    gap: 0.5rem; 
 }
 
 .accessibility-controls button {
-    padding: 10px 15px;
-    background-color: #286d47; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
+    padding: 0.625rem 0.9375rem;
+    background-color: #286d47;
+    color: white; 
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     cursor: pointer;
-    font-size: 15px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Sombra para destaque */
+    font-size: 0.9375rem;
+    box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0,0,0,0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .accessibility-controls button:hover {
-    background-color: #1e5a38; /* Cor de fundo ao passar o mouse */
-    transform: translateY(-2px); /* Efeito de "levantar" */
+    background-color: #1e5a38;
+    transform: translateY(-0.125rem); 
 }
 
-/* Estilo para o modo de alto contraste */
 body.high-contrast {
-    background-color: #000 !important; /* Fundo preto */
-    color: #FFF !important; /* Texto branco */
+    background-color: #000 !important; 
+    color: #FFF !important;
 }
 
 body.high-contrast h1,
@@ -227,16 +229,16 @@ body.high-contrast h3,
 body.high-contrast h4,
 body.high-contrast h5,
 body.high-contrast h6 {
-    color: #FF0 !important; /* Títulos em amarelo forte */
+    color: #FF0 !important; 
 }
 
 body.high-contrast p {
-    color: #FFF !important; /* Parágrafos em branco */
+    color: #FFF !important; 
 }
 
 body.high-contrast a {
-    color: #00FFFF !important; /* Links em ciano forte */
-    background-color: transparent !important; /* Fundo transparente para links */
+    color: #00FFFF !important; 
+    background-color: transparent !important;
     text-decoration: underline !important;
 }
 
@@ -245,15 +247,14 @@ body.high-contrast .introducao,
 body.high-contrast .principal,
 body.high-contrast .final,
 body.high-contrast .rodape {
-    background-image: none !important; /* Remove gradientes */
-    background-color: #000 !important; /* Garante fundo preto */
-    border-color: #FFF !important; /* Borda branca */
+    background-image: none !important; 
+    background-color: #000 !important; 
+    border-color: #FFF !important; 
 }
 
 body.high-contrast img {
-    filter: grayscale(100%) contrast(150%) !important; /* Deixa imagens em preto e branco e com mais contraste */
+    filter: grayscale(100%) contrast(150%) !important; 
 }
-
 
 @media (min-width: 600px) {
     .cabecalho {
@@ -262,18 +263,18 @@ body.high-contrast img {
     }
     .cabecalho-imagem {
         width: 20%;
-        max-width: 150px;
+        max-width: 9.375rem;
     }
     .cabecalho-lista-item {
         display: inline-block;
-        margin: 0 10px;
-        font-size: 19px;
+        margin: 0 0.625rem;
+        font-size: 1.1875rem;
     }
     .cabecalho-lista-item a {
-        padding: 10px 12px;
+        padding: 0.625rem 0.75rem;
     }
     .cabecalho-lista-item a:hover {
-        font-size: 20px;
+        font-size: 1.25rem;
         color: rgb(51, 99, 36);
         text-decoration: underline;
     }
@@ -288,28 +289,28 @@ body.high-contrast img {
     .introducao-conteudo,
     .final-conteudo {
         width: 55%;
-        margin-right: 30px;
+        margin-right: 1.875rem;
         margin-bottom: 0;
     }
     .introducao-titulo,
     .final-titulo {
-        font-size: 38px;
-        padding: 30px 0;
+        font-size: 2.375rem;
+        padding: 1.875rem 0;
     }
     .introducao-texto-um,
     .introducao-texto-dois,
     .final-texto,
     .rodape-texto {
-        font-size: 17px;
+        font-size: 1.0625rem;
     }
     .introducao-img,
     .final-img {
         width: 35%;
-        max-width: 250px;
+        max-width: 15.625rem;
     }
 
     .principal-titulo {
-        font-size: 38px;
+        font-size: 2.375rem;
     }
 
     .principal #projetos {
@@ -326,7 +327,7 @@ body.high-contrast img {
     .principal #projetos > img,
     .principal #projetos > .texto-container {
         width: 45%;
-        max-width: 450px;
+        max-width: 28.125rem;
     }
 
     .principal #projetos > .principal-titulo:nth-of-type(2) {
@@ -346,10 +347,10 @@ body.high-contrast img {
     }
 
     .rodape-titulo {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     .rodape-imagem {
-        width: 150px;
+        width: 9.375rem;
     }
 }
 
@@ -358,73 +359,73 @@ body.high-contrast img {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        padding: 24px 50px;
+        padding: 1.5rem 3.125rem;
     }
     .cabecalho-imagem {
         width: 15%;
-        max-width: 150px;
-        border: solid 10px black;
+        max-width: 9.375rem;
+        border: solid 0.625rem black;
         margin-bottom: 0;
     }
     .cabecalho-lista-item {
-        margin: 0 16px;
-        font-size: 20px;
+        margin: 0 1rem;
+        font-size: 1.25rem;
     }
     .cabecalho-lista-item a:hover {
-        font-size: 26px;
+        font-size: 1.625rem;
         color: rgb(51, 99, 36);
         text-decoration: underline;
     }
 
     .introducao,
     .final {
-        padding: 50px;
+        padding: 3.125rem;
     }
     .introducao-conteudo,
     .final-conteudo {
         width: 60%;
-        max-width: 650px;
-        margin-right: 50px;
+        max-width: 40.625rem;
+        margin-right: 3.125rem;
     }
     .introducao-titulo,
     .final-titulo {
-        padding: 45px 0;
-        font-size: 45px;
+        padding: 2.8125rem 0;
+        font-size: 2.8125rem;
     }
     .introducao-texto-um,
     .introducao-texto-dois,
     .final-texto,
     .rodape-texto {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     .introducao-img,
     .final-img {
         width: 30%;
-        max-width: 300px;
-        border: solid 10px black;
+        max-width: 18.75rem;
+        border: solid 0.625rem black;
     }
 
     .principal {
-        padding: 50px;
+        padding: 3.125rem;
     }
     .principal-titulo {
-        padding: 50px;
-        font-size: 45px;
+        padding: 3.125rem;
+        font-size: 2.8125rem;
     }
     .principal #projetos {
-        gap: 40px;
+        gap: 2.5rem;
     }
     .principal #projetos > img {
-        max-width: 400px;
+        max-width: 25rem;
     }
 
     .rodape {
-        padding: 50px;
+        padding: 3.125rem;
     }
     .rodape-titulo {
-        font-size: 27px;
+        font-size: 1.6875rem;
     }
     .rodape-imagem {
-        width: 190px;
+        width: 11.875rem;
     }
 }

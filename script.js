@@ -1,27 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const body = document.body;
-    let initialFontSize = getComputedStyle(body).fontSize; // Armazena o tamanho inicial da fonte
+    const rootElement = document.documentElement; // Seleciona o <html>
+    let initialFontSize = getComputedStyle(rootElement).fontSize; // Armazena o tamanho inicial da fonte do HTML
 
     // Função para alternar o contraste
     const toggleContrast = () => {
-        body.classList.toggle('high-contrast');
+        document.body.classList.toggle('high-contrast'); // O alto contraste ainda afeta o body para cores
     };
 
     // Função para aumentar o tamanho da fonte
     const increaseFontSize = () => {
-        const currentSize = parseFloat(getComputedStyle(body).fontSize);
-        body.style.fontSize = (currentSize + 2) + 'px'; // Aumenta em 2px
+        const currentSize = parseFloat(getComputedStyle(rootElement).fontSize);
+        rootElement.style.fontSize = (currentSize + 2) + 'px'; // Aumenta em 2px
     };
 
     // Função para diminuir o tamanho da fonte
     const decreaseFontSize = () => {
-        const currentSize = parseFloat(getComputedStyle(body).fontSize);
-        body.style.fontSize = (currentSize - 2) + 'px'; // Diminui em 2px
+        const currentSize = parseFloat(getComputedStyle(rootElement).fontSize);
+        rootElement.style.fontSize = (currentSize - 2) + 'px'; // Diminui em 2px
     };
 
     // Função para resetar o tamanho da fonte
     const resetFontSize = () => {
-        body.style.fontSize = initialFontSize;
+        rootElement.style.fontSize = initialFontSize;
     };
 
     // Pega os botões pelo ID
