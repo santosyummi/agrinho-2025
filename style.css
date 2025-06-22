@@ -42,7 +42,7 @@ body {
     text-overflow: ellipsis; 
 }
 
-.cabecalho-lista-item a {
+.cabecalho-lista-item {
     text-decoration: none;
     color: rgb(0, 0, 0);
     padding: 8px 10px;
@@ -139,7 +139,7 @@ li, a:hover {
         font-size: 19px;
     }
 
-    .cabecalho-lista-item a {
+    .cabecalho-lista-item {
         padding: 10px 12px;
     }
 
