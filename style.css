@@ -41,6 +41,7 @@ body {
     font-size: 18px;
 }
 
+/* Para o primeiro item do menu, se quiser que comece em negrito (opcional) */
 .cabecalho-lista-item:first-child a {
     font-weight: bold;
 }
@@ -93,6 +94,7 @@ body {
 .final-texto {
     font-size: 16px;
     margin-bottom: 15px;
+    line-height: 1.6; /* Adicionado para melhor legibilidade */
 }
 
 .introducao-img,
@@ -116,42 +118,66 @@ body {
     font-size: 32px;
 }
 
+/* Aplicar flexbox para organizar imagem e texto nas seções internas da principal */
 .principal section {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column; /* Padrão mobile: imagem acima, texto abaixo */
     align-items: center;
-    gap: 20px; 
+    gap: 20px; /* Espaço entre a imagem e o conteúdo */
     padding: 20px 0;
-    max-width: 900px; 
-    margin: 0 auto; 
+    max-width: 900px; /* Limita a largura da seção para não ficar muito esticada */
+    margin: 0 auto; /* Centraliza a seção */
 }
 
-.principal img { 
-    width: 80%; 
-    max-width: 400px;
+.principal img { /* Para as imagens dentro das seções da principal */
+    width: 80%; /* Um pouco mais largo para ocupar mais espaço em mobile */
+    max-width: 400px; /* Limita a largura máxima da imagem */
     border: solid 5px black;
 }
 
+/* Estilo para o container de texto dentro das seções da principal */
 .principal .texto-container {
     width: 100%; /* Ocupa a largura total do container flex em mobile */
     max-width: 600px; /* Limita a largura do texto em telas maiores */
     text-align: left; /* Alinha o texto à esquerda */
 }
 
-
-.principal .texto-container,
-.principal .texto-container {
+/* Estilo para todos os parágrafos e h4 dentro do texto-container */
+.principal .texto-container p,
+.principal .texto-container h4 {
     font-size: 16px;
     margin-bottom: 15px;
     line-height: 1.6;
     color: #333;
 }
 
-.principal .texto-container {
+.principal .texto-container h4 {
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 20px;
     color: #286d47;
+}
+
+/* Ajustes para a lista ordenada na seção prática */
+#pratica ol {
+    list-style-position: inside; /* Numeração dentro do conteúdo */
+    padding-left: 20px; /* Adiciona um recuo para os números */
+    margin: 0 auto; /* Centraliza a lista dentro do seu contêiner se não for flex item */
+    text-align: left; /* Alinha o texto da lista à esquerda */
+    width: 100%; /* Garante que ocupe a largura disponível no flex item */
+}
+
+#pratica ol li {
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+#pratica ol li p {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 /* --- Rodapé --- */
@@ -191,101 +217,13 @@ body {
     color: #0000AA; /* Cor para hover do link */
 }
 
-/* --- Estilo do Botão de Acessibilidade --- */
-.botao-acessibilidade {
-    background-color: #286d47; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 15px; /* Espaçamento abaixo dos itens do cabeçalho */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.botao-acessibilidade:hover {
-    background-color: #1a4f32;
-}
-
-/* --- Modo Escuro (Dark Mode) --- */
-body.dark-mode {
-    background-color: #1a1a1a; /* Fundo geral escuro */
-    color: #e0e0e0; /* Texto claro */
-}
-
-body.dark-mode .cabecalho {
-    background-color: #333;
-    color: #e0e0e0;
-}
-
-body.dark-mode .cabecalho-lista-item a {
-    color: #e0e0e0;
-}
-
-body.dark-mode .cabecalho-lista-item a:hover {
-    color: #a9dbaf; /* Cor de destaque no hover do modo escuro */
-}
-
-body.dark-mode .introducao,
-body.dark-mode .final {
-    background-image: linear-gradient(#303030, #505050); /* Gradiente escuro */
-    color: #e0e0e0;
-    border-bottom-color: #666;
-}
-
-body.dark-mode .introducao-titulo,
-body.dark-mode .final-titulo {
-    color: #a9dbaf; /* Cor de destaque para títulos no modo escuro */
-}
-
-body.dark-mode .principal {
-    background-color: #2b2b2b;
-    color: #e0e0e0;
-}
-
-body.dark-mode .principal-titulo {
-    color: #a9dbaf;
-}
-
-body.dark-mode .principal h4 {
-    color: #a9dbaf;
-}
-
-body.dark-mode .principal p {
-    color: #e0e0e0;
-}
-
-body.dark-mode #pratica ol li {
-    color: #e0e0e0;
-}
-
-body.dark-mode .rodape {
-    background-color: #333;
-    color: #e0e0e0;
-    border-top-color: #666;
-}
-
-body.dark-mode .rodape-titulo {
-    color: #a9dbaf;
-}
-
-body.dark-mode .rodape-texto {
-    color: #e0e0e0;
-}
-
-body.dark-mode .rodape-texto a {
-    color: #a9dbaf; /* Links no rodapé em modo escuro */
-}
-
-
 /* --- Media Queries --- */
 
 /* Telas maiores que 600px */
 @media (min-width: 600px) {
     /* Regras do Cabeçalho para 600px+ */
     .cabecalho {
-        flex-direction: column; /* Manter o botão abaixo do menu em telas maiores */
+        flex-direction: column;
         align-items: center;
     }
     .cabecalho-imagem {
@@ -304,12 +242,6 @@ body.dark-mode .rodape-texto a {
         font-size: 20px;
         color: rgb(51, 99, 36);
         text-decoration: underline;
-    }
-
-    /* Ajuste para o botão em telas maiores */
-    .botao-acessibilidade {
-        margin-left: 0;
-        margin-top: 20px; /* Ajuste para o espaçamento */
     }
 
     /* Regras da Introdução e Final para 600px+ */
@@ -354,24 +286,23 @@ body.dark-mode .rodape-texto a {
         max-width: 1000px; /* Aumenta a largura máxima para o layout horizontal */
     }
     /* Alterna a ordem da imagem e texto para cada seção */
-    .principal section:nth-of-type(odd) { /* Ex: Seção Projetos (primeira 'section' dentro de 'principal') */
+    .principal section:nth-of-type(odd) {
         flex-direction: row; /* Imagem à esquerda, texto à direita */
     }
-    .principal section:nth-of-type(even) { /* Ex: Seção Pratica (segunda 'section' dentro de 'principal') */
+    .principal section:nth-of-type(even) {
         flex-direction: row-reverse; /* Imagem à direita, texto à esquerda */
     }
     .principal img {
         width: 40%; /* Ajusta a largura da imagem */
         max-width: 350px; /* Limite máximo da imagem */
     }
-    .principal .texto-container { /* Container para o texto para gerenciar sua largura e alinhamento */
+    .principal .texto-container {
         width: 55%; /* Ocupa o restante do espaço */
         text-align: left;
     }
-    /* Removido p, h4 aqui para usar a regra do .texto-container */
     #pratica ol {
-        max-width: none; /* Remove o max-width fixo para preencher o container */
-        margin: 0; /* Remove a margem auto para alinhar à esquerda */
+        max-width: none;
+        margin: 0;
     }
 
     /* Regras do Rodapé para 600px+ */
@@ -406,13 +337,6 @@ body.dark-mode .rodape-texto a {
         font-size: 26px;
         color: rgb(51, 99, 36);
         text-decoration: underline;
-    }
-
-    /* Posicionar o botão à direita na tela grande */
-    .botao-acessibilidade {
-        margin-left: auto; /* Empurra o botão para a direita */
-        margin-top: 0; /* Remove margem superior extra */
-        margin-right: 20px; /* Adiciona um pequeno espaçamento à direita */
     }
 
     /* Regras da Introdução e Final para 900px+ */
